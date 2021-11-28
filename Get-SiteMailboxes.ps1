@@ -16,7 +16,7 @@
 
         Write-Host "Retrieving File: $($inputfile)"  -ForegroundColor Cyan -backgroundcolor Blue
         $UserListCSV = Get-Content $inputfile
-        $Header = """EmailAddress"",""UserPrincipalName"",""Site"",""MailboxSizeGB"",""AccountType"""
+        $Header = "EmailAddress,UserPrincipalName,Site,MailboxSizeGB,AccountType"
 
         If ($UserListCSV[0] -ne $Header) {
             Write-Host "STOP! Inputfile Header Format. Please revalidate data file and run again." -ForegroundColor Red
